@@ -78,3 +78,56 @@ useState --> used to change the state, change doesnt mean value updation, change
 
 let [counter, setCounter] = useState(15);
 setCounter --> takes in the new value that has to be put in counter variable
+__________________________________________________________________________________________________________________________
+
+#6 - Virtual DOM, Fibre and reconciliation..
+
+ReactDOM.createRoot() --> createRoot creates DOM like structure behind the scenes.
+when page reloads --> bts the browser removes the whole dom, then re-structures the whole dom again from scratch.
+but, in virtualDOM --> only the values which have changed are removed and updated, instead of re-structuring whole dom.
+
+React Fibre Architecture :
+- well implemented algorithm 
+- goal of react fibre is to increase its suitability for areas like animation, layout and gestures.
+- incremental rendering: ability to split rendering work into chunks and spread it out over multiple frames.
+- key features - ability pause, abort and reuse the work as updates come in, ability to assign priority to diff types of updates.
+
+Reconciliation: 
+- recursive algorithm that react uses to compare two trees to determine which parts need to be changed.
+- these react trees arise from createRoot() method
+
+Hydration concept --> adding functionality to elements like buttons, images, web layout by injecting javaScript into it.
+
+Idea of React API 
+--> think of updates, as they cause entire app to re-render.
+--> this allows developer to reason declaratively, rather than worry about how state transition of an app happens efficiently.
+--> re-rendering entire app on each change only works for most trivial apps.
+--> in real world app, its costly in terms of performance.
+--> react has optimizations which create appearance of whole app re-rendering while maintaining great performance.
+--> the bulk of these optimizations are part of process called reconciliation.
+
+** Reconciliation 
+- algorithm behind what is popularly understood as virtualDOM. 
+- when you render a react app, a tree of nodes that describes the app is generated and saved in memory.
+- this tree is now flushed to rendering environment.
+
+Example:
+in case of browser app --> its translated to set of DOM operations. when app is updated (usually via setState) --> a new tree is generated.
+this new tree is compared with previous tree to compute which operations are needed to update the rendered app.
+
+* Differentiation of lists is performed using keys.
+* Keys should be stable, predictable and unique
+
+Key Points:
+* in a UI, its not necessary for every update to be applied instantly, infact doing so can cause frames to drop and degrading user experience.
+* Diff types of updates have diff priorities
+* push-based approach requires app to decide how to schedule work.
+* pull-based approach follows framework to be smart and make those decisions for you.
+
+Fiber: 
+lower level abstraction than application developers typically think about.
+- pause work and come back to it later.
+- assign priority to different types of work.
+- reuse previously completed work
+- abort work if its no longer needed.
+__________________________________________________________________________________________________________________________
