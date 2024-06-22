@@ -1,0 +1,80 @@
+"# react-series" 
+#1 
+intro to what is react?
+__________________________________________________________________________________________________________________________
+
+#2 - create react and vite folders
+
+react is a library
+react-dom, react-native are attachements provided with react library
+for website working --> use react with react-dom
+for mobile apps --> use react with react-native
+react --> using with a framework --> exmaple: next.js
+react --> using without a framework --> use bundlers like vite or parcel
+
+npm [node package manager] --> installer for node.js
+but many a times, user may not be ok with installing the packages, instead they prefer direct execution, so they use
+
+npx [node package executer]  
+
+create-react-app --> utility/software used to create projects
+npx create-react-app filename(noCaps) ---> installation method, but takes time
+create-react-app --> famous, but bulky with big bundle size.
+
+scripts in react:
+start --> to run projects in dev environment [npm run start]
+build --> browser only understands html,js --> so to manage react in production use build
+test --> to run all test cases
+eject --> eject your application from react.
+
+when npm run build is hit --> build folder gets created --> whatever js that was written in react, got converted into this build, when code goes to production this build is served to the user, not the src folder
+
+alternative to create-react-app utility
+npm create vite@latest --> give project name --> select framework --> select variant(js/ts)
+but in vite file there is no node_modules created.
+so install node_modules using npm install command.
+__________________________________________________________________________________________________________________________
+
+#3 - Understanding react flow and structure
+
+whenever you create components in vite --> use jsx or tsx --> because vite is configured to read jsx/tsx
+
+in jsx file, when you use return() there should be only one tag in return. make a div, and keep as many of tags as you want in that div, but externally only 1 tag allowed in return()
+return (
+      <p></p>
+      <h></h>
+)
+above not allowed, instead write as below
+return (
+      <div>
+            <p></p>
+            <h></h>
+      </div>
+)
+this is allowed
+
+good practice --> function name and file/components name start with Caps
+__________________________________________________________________________________________________________________________
+
+#4 - Creating own react library and JSX
+
+Standard way of writing react element.
+reactElement = {
+      type: "type of html element",
+      props: {
+            properties of element we want to add like href, target 
+      }
+      children: " "
+}
+now inject this reactElement into root container
+method name can be anything, say customRender but it needs to be defined and written.
+customRender("file need to be injected", "location where the file is to be injected")
+__________________________________________________________________________________________________________________________
+
+#5 - HOOKS !
+hooks need to be imported in following way only: import { hookName } from 'react' because they are exported in the same way.
+useState --> used to change the state, change doesnt mean value updation, change is propogated into your UI's dom.
+--> useState() --> values can be --> number, string, array, boolean, function, object etc..
+
+let [counter, setCounter] = useState(15);
+setCounter --> takes in the new value that has to be put in counter variable
