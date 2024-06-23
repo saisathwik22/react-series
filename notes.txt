@@ -32,7 +32,7 @@ when npm run build is hit --> build folder gets created --> whatever js that was
 alternative to create-react-app utility
 npm create vite@latest --> give project name --> select framework --> select variant(js/ts)
 but in vite file there is no node_modules created.
-so install node_modules using npm install command.
+so install node_modules using npm install command inside the vite project
 __________________________________________________________________________________________________________________________
 
 #3 - Understanding react flow and structure
@@ -136,6 +136,17 @@ ________________________________________________________________________________
 
 03-Tailwindprops file
 
+tailwind package :
+[inside your vite project file]
+npm install -D tailwindcss postcss autoprefixer
+npx tailwindcss init -p
+
+then inside tailwind config file, add this content
+"./index.html", "./src/**/*.{js,ts,jsx,tsx}"
+
+include these decorators in css file
+@tailwind base, components, utilities
+
 props: make components re-usable.
 example: you have a card component code snippet in card.jsx
 import this card into app.jsx and use as <card />
@@ -166,4 +177,23 @@ const addValue = () => {
   setCounter(prevCounter => prevCounter + 1)
 };
 increments previous number by 1 in each call.
-ans: number increases by 4.
+ans: number increases by 4. 
+__________________________________________________________________________________________________________________________
+
+#9 - building react project - bgChanger
+
+list of colors given, click on it to change the color
+create vite project file, install npm, tailwind package
+
+set default color:
+const [color, setColor] = useState("aliceblue");
+
+sample color button:
+<button
+  onClick={() => setColor("blue")}
+  className='outline-none px-4 py-1 rounded-full text-white shadow-lg'
+  style={{ backgroundColor: "blue" }}
+> Blue </button>
+__________________________________________________________________________________________________________________________
+
+#10 - useEffect, useRef and useCallback with project
