@@ -9,15 +9,14 @@ function App() {
   // let counter = 15;
 
   const addValue = () => {
-    if (counter >= 20) setCounter(counter + 0);
-    // counter = counter + 1;
-    else setCounter(counter + 1);
-    console.log("clicked", counter);
+    //counter = counter + 1
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
+    setCounter((prevCounter) => prevCounter + 1);
   };
   const removeValue = () => {
-    if (counter <= 0) setCounter(counter - 0);
-    else setCounter(counter - 1);
-    console.log("clicked", counter);
+    setCounter((prevCounter) => prevCounter - 1);
   };
 
   return (

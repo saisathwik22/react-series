@@ -146,4 +146,24 @@ config name/title in card.jsx by passing {name} into card function
 use <card name='sathwik' /> in card.jsx
 __________________________________________________________________________________________________________________________
 
-#8 - 
+#8 - interview specific in reactJS
+starting from 15, when you click addValue, how will number increase.
+ans: number increases by 1 only.
+const addValue = () => {
+  //counter = counter + 1
+  setCounter(counter + 1)
+  setCounter(counter + 1)
+  setCounter(counter + 1)
+  setCounter(counter + 1)
+};
+
+when you use
+const addValue = () => {
+  //counter = counter + 1
+  setCounter(prevCounter => prevCounter + 1)
+  setCounter(prevCounter => prevCounter + 1)
+  setCounter(prevCounter => prevCounter + 1)
+  setCounter(prevCounter => prevCounter + 1)
+};
+increments previous number by 1 in each call.
+ans: number increases by 4.
