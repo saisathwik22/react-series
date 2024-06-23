@@ -131,3 +131,19 @@ lower level abstraction than application developers typically think about.
 - reuse previously completed work
 - abort work if its no longer needed.
 __________________________________________________________________________________________________________________________
+
+#7 - Tailwind and props in reactJS
+
+03-Tailwindprops file
+
+props: make components re-usable.
+example: you have a card component code snippet in card.jsx
+import this card into app.jsx and use as <card />
+now you can use this card multiple times.
+if you are using this card multiple times in app.jsx , and you need different data inside the card each time you use it, use "props"
+ex: if card contains name/title, you need two cards with different name/title, use "props"
+config name/title in card.jsx by passing {name} into card function 
+use <card name='sathwik' /> in card.jsx
+__________________________________________________________________________________________________________________________
+
+#8 - 
