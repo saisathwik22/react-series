@@ -1,6 +1,9 @@
 "# react-series" 
 #1 
 intro to what is react?
+
+** use REACT.dev documentation **
+
 __________________________________________________________________________________________________________________________
 
 #2 - create react and vite folders
@@ -197,3 +200,17 @@ sample color button:
 __________________________________________________________________________________________________________________________
 
 #10 - useEffect, useRef and useCallback with project
+
+Random Password-type string including numbers, special characters, with seek bar deciding length of password, copy button which copies the string.
+
+useCallback : react hook that lets you cache a function definition between re-renders.
+useCallback(function, dependenies)
+
+useEffect: lets you synchronize a component with an external system
+useEffect(setup, dependenies?)
+dependenies array - array which contains methods/functions which when hit, impacts the useEffect
+
+Synchronizing with effects:
+effects lets you run some code after rendering so that you can synchronize your component with system outside of react
+
+useRef() : when user needs to take reference of anything, useRef() is used.
