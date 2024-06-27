@@ -214,3 +214,24 @@ Synchronizing with effects:
 effects lets you run some code after rendering so that you can synchronize your component with system outside of react
 
 useRef() : when user needs to take reference of anything, useRef() is used.
+______________________________________________________________________________________________________________________________________________________
+
+#11 - Custom Hooks in react | currency project
+
+whenever creating hooks, start with use --> standard approach
+
+we are creating a hook called "useCurrencyInfo".
+many hooks have optional argument but our hook has to be provided with currency info.
+so pass on the argument "currency" inside the above hook.
+This hook returns a data. We want to call API in this hook.
+use "useEffect" because when this method is hit it automatically fetches the API, no need of fetching the API manually.
+this "useEffect" needs callback function and a dependency array.
+mention currency url in fetch call, convert response to json. Extract key value from currency info.
+
+export the hook default method.
+
+key is important for loops in react.
+
+useId hook -> to generate unique IDs
+
+Do not call useId to generate keys in a list, Keys should be generated from your data.
