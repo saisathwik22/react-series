@@ -35,4 +35,4 @@ content: ["./index.html", "./src/**/*.{js,ts,jsx,tsx}"]
 @tailwind components;
 @tailwind utilities;
 
-## Now you are ready to build using React + Vite + Tailwind !
+### Now you are ready to build using React + Vite + Tailwind !

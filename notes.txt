@@ -235,3 +235,14 @@ key is important for loops in react.
 useId hook -> to generate unique IDs
 
 Do not call useId to generate keys in a list, Keys should be generated from your data.
+___________________________________________________________________________________________________________________________________________________________
+
+#12 - React router 
+
+creating a webpage with home, about, contact pages allowing navigation towards them.
+footer and header sections.
+using Github api to fetch github profile elements.
+url:5000/params/param_name --> capturing "param_name" from url parameters.
+param_name is a parameter.
+
+reactrouter.com --> refer for react router concepts.
