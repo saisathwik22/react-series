@@ -246,3 +246,12 @@ url:5000/params/param_name --> capturing "param_name" from url parameters.
 param_name is a parameter.
 
 reactrouter.com --> refer for react router concepts.
+
+npm i react-router-dom
+
+** Link --> we use inplace of <a> tag, because using <a> tag reloads the whole page and renders the page from scratch.
+NavLink --> similar to link,but with extra features.
+
+isActive in NavLink --> to check whether the page you are in, is active or not.
+
+loader --> if you want to fetch data from any API or database, direct API calls can be hit from here.
