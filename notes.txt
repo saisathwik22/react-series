@@ -255,3 +255,26 @@ NavLink --> similar to link,but with extra features.
 isActive in NavLink --> to check whether the page you are in, is active or not.
 
 loader --> if you want to fetch data from any API or database, direct API calls can be hit from here.
+_______________________________________________________________________________________________________________________________________________________
+
+#13 - Context API
+
+creating a global file and accessing data from there directly, instead of passing the data through every stage of code to reach the destination.
+
+context API associated purely with REACT, it doesnt exist outside of react.
+
+REDUX : handling state management, organizing the passing of data.
+react-Redux : package to use redux in react, since redux is standalone library.
+Redux-toolkit(RTK) : easier version of Redux present in the market.
+
+zustand - library similar to redux, to handle state management.
+
+useContext() - react hook that lets you read and subscribe to context from your component.
+
+mostly context written in JS file.
+context provider is written in JSX file.
+
+when you create a context, it majorly gives you a provider.
+Every context is a provider.
+Eventually, we wrap components under this context, now it becomes a provider.
+the components wrapped, can be accessed globally now.
