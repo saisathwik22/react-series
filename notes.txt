@@ -290,3 +290,57 @@ Tasks remain same even after a page reload/ render.
 _____________________________________________________________________________________________________________________________________________________
 
 #15 - Redux Toolkit (RTK)
+
+React
+React-dom
+React-native
+
+Redux: independent state management library
+react-redux: bridge to use redux in react.
+
+Initially FLUX designed by facebook, used for state management and central store for global variable access.
+DATA FLOW : data go into the store in a specific way and get updated, and whenever user fetches it, it should be sent in a specific manner.
+A structure/mechanism should be defined for how values are updated and fetched.
+but, FLUX's data flow was not efficient.
+
+REDUX was bit of better version of FLUX.
+'You should never mutate your state'
+Changes in store should happen through functions/reducers only, not directly.
+
+Redux - predictable state container for JS apps.
+redux-toolkit : battery-included toolkit. Better version of redux. Built-in middlewares. Many other features.
+
+STORE : global variable storage. Store can have sub-stores.
+REDUCER: object, functionality regarding control and updation inside stores.
+useSelector: select value from store.
+useDispatch: to dispatch a value from store.
+
+npm install @reduxjs/toolkit
+npm install react-redux
+
+Redux toolkit includes these APIs:
+* configureStore() : wraps createStore to provide simplified config options and good defaults. can automatically combine your slice-reducers, adds    whatever redux middlewares you supply, includes redux-thunk by default, and enables use of redux Devtools extension.
+
+* createReducer() : lets you supply a lookup table of action types to case reducer functions, rather than writing switch statements. automatically uses the immer library to let your write simpler immutable updates with normal mutative code, like state.todos[3].complete = true.
+
+* createAction() : generates an action creater function for given action type string. the function itself has toString() defined, so that it can be used in place of type constant.
+
+* createSlice() : accepts object of reducer functions, a slice name, intial state value, automatically generates a slice reducer with corresponding action creators and action types.
+
+* createAsyncThunk : accepts an action type string and a function that returns a promise, and generates a thunk that dispatches pending/fullfilled/rejected action types based on that promise.
+
+* createEntityAdapter: generates set of reusable reducers and selectors to manage normalized data in store
+
+* the createSelector utility from Reselect library, re-exported for each of use.
+
+RTK Query:
+- provided as an optional addon within the @reduxjs/toolkit package.
+- purpose built to solve the use case of data fetching and caching, supplying a compact, but powerful toolset to define an API interface layer for 
+  your app.
+- intended to simplify common cases for loading data in a web application, eliminating need to hand-write data fetching and caching logic yourself.
+- built on top of of RTK core for its implementation, uses Redux internally for its architecture.
+
+Every slice has an inital state.
+_________________________________________________________________________________________________________________________________________________
+
+#16 - 
