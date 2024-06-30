@@ -278,3 +278,8 @@ when you create a context, it majorly gives you a provider.
 Every context is a provider.
 Eventually, we wrap components under this context, now it becomes a provider.
 the components wrapped, can be accessed globally now.
+ 
+enable darkMode: class --> inside tailwind config file.
+_______________________________________________________________________________________________________________________________________________________
+
+#14 - Context API with local Storage
