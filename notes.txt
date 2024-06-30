@@ -283,3 +283,10 @@ enable darkMode: class --> inside tailwind config file.
 _______________________________________________________________________________________________________________________________________________________
 
 #14 - Context API with local Storage
+
+Building TODO application with adding tasks, editing the task, deleting, storing tasks in local storage.
+Tasks remain same even after a page reload/ render.
+
+_____________________________________________________________________________________________________________________________________________________
+
+#15 - Redux Toolkit (RTK)
